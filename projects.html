@@ -24,41 +24,61 @@
             <h1>My Projects</h1>
             <p>Here is a list of all my work in Robotics, Control Systems, and Mechanical design</p>
             
-            <div class="card">
-                <img src="assets/images/projet-drone.jpg" alt="Quadrotor Project">
-                <div class="card-content">
-                    <h3>Autonomous Drone Navigation</h3>
-                    <p>Designed and implemented a PID controller with sensor fusion (IMU + Optitrack) for a quadrotor to follow a complex trajectory in a wind-free environment using ROS.</p>
-                    <a href="https://github.com/your-repo">View on GitHub &rarr;</a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <img src="assets/images/project-arm.jpg" alt="Robotic Arm Project">
-                <div class="card-content">
-                    <h3>6-DOF Robotic Arm</h3>
-                    <p>Developed a kinematic model and simulation for a 6-DOF robotic arm in Gazebo. Implemented inverse kinematics to perform pick-and-place tasks.</p>
-                    <a href="#">View Details &rarr;</a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <img src="assets/images/project-car.jpg" alt="Self-Driving Car Project">
-                <div class="card-content">
-                    <h3>Lane-Following Self-Driving Car</h3>
-                    <p>Used computer vision (OpenCV) to detect lane lines and a kinematic bicycle model to simulate a self-driving car in Python. Implemented a Stanley controller for steering.</p>
-                    <a href="#">View Details &rarr;</a>
+            <button class="accordion">Robotics and Control ▾</button>
+            <div class="panel">
+                <div class="project-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Autonomous Drone Navigation</h3>
+                            <p>Designed and implemented a PID controller with sensor fusion (IMU + Optitrack) for a quadrotor to follow a complex trajectory in a wind-free environment using ROS.</p>
+                            <a href="https://github.com/your-repo">View on GitHub &rarr;</a>
+                        </div>
+                    </div>                   
                 </div>
             </div>
 
-            <!-- <div class="card">
-                <img src="assets/images/project-arm.jpg" alt="Robotic Arm Project">
-                <div class="card-content">
-                    <h3>6-DOF Robotic Arm</h3>
-                    <p>Developed a kinematic model and simulation for a 6-DOF robotic arm in Gazebo. Implemented inverse kinematics to perform pick-and-place tasks.</p>
-                    <a href="#">View Details &rarr;</a>
+            <button class="accordion">Mechanical Design ▾</button>
+            <div class="panel">
+                <div class="project-grid">
+                    <div class="card">
+                        <!-- <img src="assets/images/project-arm.jpg" alt="Robotic Arm Project"> -->
+                        <div class="card-content">
+                            <h3>6-DOF Robotic Arm</h3>
+                            <p>Developed a kinematic model and simulation for a 6-DOF robotic arm in Gazebo. Implemented inverse kinematics to perform pick-and-place tasks.</p>
+                            <a href="#">View Details &rarr;</a>
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+
+            <button class="accordion">AI and Machine Learning ▾</button>
+            <div class="panel">
+                <div class="project-grid">
+                    <div class="card">
+                        <!-- <img src="assets/images/project-car.jpg" alt="Self-Driving Car Project"> -->
+                        <div class="card-content">
+                            <h3>Lane-Following Self-Driving Car</h3>
+                            <p>Used computer vision (OpenCV) to detect lane lines and a kinematic bicycle model to simulate a self-driving car in Python. Implemented a Stanley controller for steering.</p>
+                            <a href="#">View Details &rarr;</a>
+                        </div>
+                    </div>              
+                </div>
+            </div>
+
+            <!-- <button class="accordion">AI and Machine Learning ▾</button>
+            <div class="panel">
+                <div class="project-grid">
+                    <div class="card">
+                        <img src="assets/images/project-car.jpg" alt="Self-Driving Car Project">
+                        <div class="card-content">
+                            <h3>Lane-Following Self-Driving Car</h3>
+                            <p>Used computer vision (OpenCV) to detect lane lines and a kinematic bicycle model to simulate a self-driving car in Python. Implemented a Stanley controller for steering.</p>
+                            <a href="#">View Details &rarr;</a>
+                        </div>
+                    </div>              
                 </div>
             </div> -->
+
         </section>
 
     </div>
@@ -67,6 +87,7 @@
         <p>&copy; 2025 Rakshith Ajetaravi. All rights reserved.</p>
     </footer>
 
+<script src="assets/js/script.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@ body {
     padding: 0;
     background-color: #f4f7f6;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 .container {
@@ -75,11 +75,13 @@ nav ul li a.active {
 
 /* --- Header / Hero Section (for Home Page) --- */
 .hero {
-    background: #34495e; /* Slightly lighter blue */
+    background: #34495e;  /* Slightly lighter blue*/
+    /* background: linear-gradient(180deg, #2c3e50, #4ca1af); */
     color: white;
     padding: 60px 20px;
     text-align: center;
 }
+
 .hero h1 {
     color: white;
     font-size: 2.8rem;
@@ -88,6 +90,7 @@ nav ul li a.active {
 .hero p {
     font-size: 1.3rem;
     opacity: 0.9;
+    margin-top: 5px;
 }
 
 /* --- General Page Section Styling --- */
@@ -97,6 +100,19 @@ section {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* --- New Profile Picture Styles --- */
+.profile-pic {
+    width: 160px;        /* Controls the size */
+    height: 180px;       /* Must match width to be a perfect circle */
+    border-radius: 25%;  /* Makes it circular */
+    border: 2px solid white; /* Adds a nice white ring */
+    object-fit: cover;   /* Prevents image from looking squashed */
+    margin-bottom: 15px; /* Adds space between photo and name */
+    display: block;      /* Centers the image */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* --- Projects Page (Card Grid) --- */
@@ -131,6 +147,46 @@ section {
 
 .card-content h3 {
     margin-top: 0;
+}
+
+/* --- Accordion (Category Dropdown) Styles --- */
+
+/* The Button Style */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.4s;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+/* Change color when hovering or active */
+.active-accordion, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* The Panel (Hidden by default) */
+.panel {
+    padding: 0 18px;
+    display: none; /* HIDDEN by default */
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-left: 3px solid #ccc; /* Visual line to show it's inside */
+}
+
+/* Fix for grid inside hidden panel */
+.panel .project-grid {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* --- Education Page --- */
@@ -187,4 +243,39 @@ footer {
     padding: 20px;
     color: #888;
     margin-top: 30px;
+}
+
+/* OTHER FEATURES */
+/* --- Responsive / Mobile Styles --- */
+
+/* This rule triggers ONLY when screen width is 600px or less (Tablets/Phones) */
+@media (max-width: 600px) {
+    
+    /* 1. Make the Navigation Stack Vertically */
+    nav ul {
+        flex-direction: column; /* Change from row (side-by-side) to column (stack) */
+        align-items: center;    /* Center them */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add space on top/bottom instead of left/right */
+        width: 100%;    /* Make the link area fill the width */
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;       /* Makes the whole bar clickable, not just text */
+        padding: 10px;        /* Bigger tap target for fingers */
+        background-color: rgba(255,255,255,0.1); /* Slight highlight to separate links */
+        border-radius: 5px;
+    }
+
+    /* 2. Adjust the Container width for mobile */
+    .container {
+        padding: 0 15px; /* Slightly less padding on the sides */
+    }
+
+    /* 3. Adjust Text Sizes so they aren't huge on mobile */
+    h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
 }
