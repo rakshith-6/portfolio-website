@@ -5,18 +5,18 @@
 ```
 Portfolio/
 │
-├── index.html         (This will be your "Home / About Me" page)
-├── education.html     (Your degrees and achievements)
-├── projects.html      (Your project gallery)
-├── contact.html       (Your contact info)
+├── index.html         ("Home / About Me" page)
+├── education.html     (Degrees and achievements)
+├── projects.html      (Project gallery)
+├── contact.html       (My contact info)
 │
 └── assets/
     ├── css/
-    │   └── style.css  (ONE file to control the style of ALL pages)
+    │   └── style.css (One file to control the style of all pages)
     │
     ├── images/
-    │   └── (Put your project photos, profile picture here)
+    │   └── (Project photos, profile picture)
     │
     └── js/
-        └── (Empty for now, used for advanced features later)
+        └── (Some advanced features like dropdown)
 ```
