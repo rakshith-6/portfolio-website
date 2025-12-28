@@ -1,0 +1,181 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+
+% Configure page margins
+\geometry{left=0.5in, top=0.6in, right=0.5in, bottom=0.6in}
+
+% Custom colors
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.4}
+
+% Section formatting
+\titleformat{\section}{
+	\vspace{-5pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands for list items
+\newcommand{\resumeItem}[1]{
+	\item\small{
+		{#1 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & #2 \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\begin{document}
+	
+	%----------HEADING-----------------
+	\begin{center}
+		{\Huge \textbf{Rakshith Ajetaravi}} \\ \vspace{5pt}
+		\href{mailto:arakshith@iisc.ac.in}{arakshith@iisc.ac.in} $|$ \href{mailto:rakshithajetaravi@gmail.com}{rakshithajetaravi@gmail.com} $|$ \small +91-6363759090\\
+		\small GitHub: \href{https://github.com/}{github.com/rakshith-6} % Update with actual link
+	\end{center}
+	
+	%-----------EDUCATION-----------------
+	\section{Education}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\resumeSubheading
+		{Indian Institute of Science (IISc)}{Bengaluru, India}
+		{M.Tech in Robotics and Autonomous Systems (RBCCPS)}{Present}
+		\vspace{2pt}
+		\begin{itemize}
+			\item \textbf{Current Performance:} 6.5 CGPA
+			\item \textbf{Relevant Courses:} 
+			Applied Optimal Control and State Estimation (PG),
+			Swarm Robotic System (PG),
+			Generative and Agentic AI in Practice (PG),
+			Reinforcement Learning (PG),
+			Non-linear Systems and Control (PG),
+			Sliding Mode Control and its Applications (PG),
+			Motion Planning for Autonomous Systems (PG),
+			Applied Linear and Non-Linear Control (PG),
+			Machine Learning for Cyber-Physical Systems (PG),
+			Foundations of Robotics (PG),
+			Mathematical Techniques for Robotics Systems (PG),
+			Design of Cyber-Physical Systems (PG).
+			
+			\item \textbf{Role:} \textbf{Teaching Assistant for "Dynamics of Linear System"}.
+		\end{itemize}
+		
+		\resumeSubheading
+		{The National Institute of Engineering}{Mysuru, India}
+		{Bachelor of Engineering in Mechanical Engineering}{2022}
+		\vspace{2pt}
+		\begin{itemize}
+			\item \textbf{CGPA:} 8.75 / 10
+			\item \textbf{Focus Areas:} Computational Fluid Dynamics, Robotics \& Numerical Control, Control Engineering, Aircraft Propulsion.
+		\end{itemize}
+		
+		\resumeSubheading
+		{Gopalaswamy Shishuvihara PU College}{Mysuru, India}
+		{Class 12 (PUC) - PCMB}{Completed}
+		\vspace{2pt}
+		\begin{itemize}
+			\item \textbf{Percentage:} 81.67\%
+		\end{itemize}
+	\end{itemize}
+	
+	%-----------TECHNICAL SKILLS-----------------
+	\section{Technical Skills}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\small{\item{
+				\textbf{Robotics \& Simulation}{: ROS2, Gazebo, RViz, NVIDIA ISAAC Sim, ArduPilot} \\
+				\textbf{Programming}{: Python, C++, C, MATLAB, Julia} \\
+				\textbf{Data Science \& ML}{: PyTorch, TensorFlow, Keras, Gymnasium, Numpy, Pandas} \\
+				\textbf{Engineering Design}{: SolidWorks, Fusion 360, CATIA, Ansys, Qblade, Ultimaker Cura}
+		}}
+	\end{itemize}
+	
+	%-----------PROJECTS-----------------
+	\section{Academic \& Personal Projects}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		
+		\resumeProjectHeading
+		{\textbf{VidQuery: Agentic Multimodal Video RAG} $|$ \emph{LangGraph, Qdrant, Llama-3.2-Vision}}{}
+		\resumeItem{Developing an \textbf{agentic RAG system} for video lectures that synthesizes multimodal data (video frames, audio, slide text) using local open-source models like \textbf{Llama-3.2-Vision} and \textbf{Whisper}.}
+		\resumeItem{Engineered the \textbf{Vector Database pipeline} using \textbf{Qdrant} to store and index multimodal embeddings (\textbf{CLIP} for vision, Nomic for text), optimizing retrieval for \textbf{complex temporal queries} (e.g., "what was said after this diagram?").}
+		\resumeItem{Implemented precise synchronization between visual embeddings and audio transcripts to enable \textbf{high-accuracy semantic search} across lecture content.}
+		
+		\resumeProjectHeading
+		{\textbf{Machine Learning Research Applications} $|$ \emph{Python, Scikit-Learn}}{}
+		\resumeItem{Utilized \textbf{Supervised Learning} techniques to classify earthquake-prone buildings based on structural data. Conducted hypothesis-driven research and exploratory data analysis of Australian suburbs using \textbf{Unsupervised Learning} methods.}
+		
+		\resumeProjectHeading
+		{\textbf{Innovative Bi-Copter Drone Design \& Control}}{}
+		\resumeItem{Designed an innovative \textbf{bi-copter drone}, addressing mechanical complexities unique to dual-rotor aerial systems. Implemented a \textbf{custom control strategy} to ensure \textbf{optimal flight stability} and precise rotor synchronization.}
+		
+		\resumeProjectHeading
+		{\textbf{Decentralized leader-follower formation control using RL}}{}
+		\resumeItem{Implemented a decentralized leader-follower formation control using Reinforcement Learning, specifically utilizing two Double Deep Q-Network (DDQN) algorithms: one for reaching the formation and the other for maintaining it.}
+		
+		\resumeProjectHeading
+		{\textbf{Vision-Based UAV Perception}}{}
+		\resumeItem{Engineered a \textbf{vision-based pipeline} for autonomous UAVs to \textbf{estimate velocity} and detect obstacles in real-time. Integrated perception modules with \textbf{flight control loops} to enable autonomous navigation in dynamic environments.}
+		
+		\resumeProjectHeading
+		{\textbf{Fixed Wing VTOL Development}}{}
+		\resumeItem{Currently developing a \textbf{Fixed-Wing Vertical Take-Off and Landing (VTOL)} aircraft, advancing the prototype to \textbf{Technology Readiness Level (TRL) 2}.}
+		
+		\resumeProjectHeading
+		{\textbf{4-DOF Manipulator (BE Project)} $|$ \emph{SolidWorks, Embedded C}}{}
+		\resumeItem{Designed and fabricated a \textbf{4 Degrees of Freedom (DOF)} robotic manipulator, handling the \textbf{mechanical design} and actuation system.}
+		
+		
+	\end{itemize}
+	
+	%-----------EXPERIENCE-----------------
+	% Note: The & character is escaped with a backslash (\&)
+	\section{Professional Experience \& Leadership}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		
+		\resumeSubheading
+		{Paraha Ventures}{Mysuru, India}
+		{Co-Founder}{2022 -- 2023}
+		\resumeItem{Co-founded and actively operated a \textbf{freelance digital marketing startup} for 1.5 years following graduation.}
+		\resumeItem{Delivered \textbf{end-to-end digital solutions} for local businesses, managing projects across Website Development, \textbf{SEO}, and Social Media Marketing.}
+		\resumeItem{Gained hands-on \textbf{entrepreneurial experience} in client relations, project management, and technical implementation before transitioning to higher studies.}
+		
+		\resumeSubheading
+		{Agnie Racing (Student Motorsport Club)}{}
+		{Captain}{2020 -- 2021}
+		\resumeItem{Led the team in two national-level events: \textbf{Go-kart Design Challenge 2020} and \textbf{Formula Green Concept Challenge 2021}.}
+		\resumeItem{Oversaw the \textbf{design and fabrication} of electric karts, managing team logistics and engineering timelines.}
+		
+		\resumeSubheading
+		{Make A Difference (MAD)}{}
+		{Transition Readiness Tutor}{2 Years}
+		\resumeItem{Served as a tutor focusing on \textbf{transition readiness}, providing mentorship and educational support to youth.}
+	\end{itemize}
+	
+	%-----------HOBBIES-----------------
+	\section{Hobbies \& Interests}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\small{\item{
+				\textbf{Sports}: Basketball, Cricket, Chess, Frisbee \\
+				\textbf{Creative}: Filmmaking, Writing Stories \\
+				\textbf{Reading}: Fiction, Non-Fiction, History
+		}}
+	\end{itemize}
+	
+\end{document}
