@@ -32,7 +32,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- Navigation Bar --- */
+/* Navigation Bar */
 /* This nav bar appears on EVERY page */
 nav {
     background-color: #2c3e50; /* Dark blue-gray */
@@ -72,8 +72,7 @@ nav ul li a.active {
     border-bottom: 2px solid #e74c3c;
 }
 
-
-/* --- Header / Hero Section (for Home Page) --- */
+/* Header Section (for Home Page) */
 .hero {
     background: #34495e;  /* Slightly lighter blue*/
     /* background: linear-gradient(180deg, #2c3e50, #4ca1af); */
@@ -93,7 +92,7 @@ nav ul li a.active {
     margin-top: 5px;
 }
 
-/* --- General Page Section Styling --- */
+/* General Page Section Styling */
 section {
     background: white;
     margin-bottom: 20px;
@@ -102,7 +101,7 @@ section {
     box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
-/* --- New Profile Picture Styles --- */
+/* New Profile Picture Styles */
 .profile-pic {
     width: 160px;        /* Controls the size */
     height: 180px;       /* Must match width to be a perfect circle */
@@ -115,7 +114,23 @@ section {
     margin-right: auto;
 }
 
-/* --- Projects Page (Card Grid) --- */
+/* Contact Details Social Icons Styles */
+.social-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle; /* Aligns the icon with the text */
+    margin-right: 8px;      /* Adds space between icon and text */
+    fill: #2c3e50;          /* Color of the icon (Dark Blue-Gray) */
+    position: relative;
+    top: -2px;              /* slight adjustment to align with text baseline */
+}
+
+/* Change color on hover */
+a:hover .social-icon {
+    fill: #e74c3c;
+}
+
+/* Projects Page (Card Grid) */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -149,7 +164,7 @@ section {
     margin-top: 0;
 }
 
-/* --- Accordion (Category Dropdown) Styles --- */
+/* Accordion (Category Dropdown) Styles */
 
 /* The Button Style */
 .accordion {
@@ -189,7 +204,7 @@ section {
     margin-bottom: 20px;
 }
 
-/* --- Education Page --- */
+/* Education Page */
 .education-entry {
     border-bottom: 1px solid #eee;
     padding-bottom: 15px;
@@ -207,8 +222,52 @@ section {
     color: #555;
 }
 
-/* --- Contact Page Form --- */
-.contact-form label {
+/* Vertical Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    padding: 20px 30px;
+    background: white;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    position: relative;
+    border-left: 4px solid #e74c3c; /* The red vertical line */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: -10px;
+    top: 20px;
+    background-color: white;
+    border: 4px solid #2c3e50; /* The blue dot */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-date {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Fix for nested lists inside the timeline */
+.timeline-item ul {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+/* Contact Page Form */
+/* .contact-form label {
     display: block;
     margin: 10px 0 5px 0;
     font-weight: bold;
@@ -219,7 +278,7 @@ section {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Important! */
+    box-sizing: border-box; 
 }
 .contact-form button {
     display: inline-block;
@@ -235,9 +294,9 @@ section {
 }
 .contact-form button:hover {
     background: #c0392b;
-}
+} */
 
-/* --- Footer --- */
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -246,7 +305,7 @@ footer {
 }
 
 /* OTHER FEATURES */
-/* --- Responsive / Mobile Styles --- */
+/* Responsive / Mobile Styles */
 
 /* This rule triggers ONLY when screen width is 600px or less (Tablets/Phones) */
 @media (max-width: 600px) {
