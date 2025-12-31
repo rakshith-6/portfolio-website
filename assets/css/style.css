@@ -145,11 +145,14 @@ nav ul li a.active {
     .hero-content-wrapper {
         flex-direction: column; /* Switch to Vertical Stack */
         gap: 30px;              /* Reduce gap */
+        align-items: center; 
     }
 
     .hero-links {
-        align-items: center;    /* Center the links on mobile */
-        width: 100%;            /* Ensure full width */
+        align-items: flex-start;    /* Center the links on mobile */
+        text-align: left;
+        width: fit-content;            /* Ensure full width */
+        margin: 0 auto;          
     }
 }
 
