@@ -92,6 +92,44 @@ nav ul li a.active {
     margin-top: 5px;
 }
 
+/* --- Hero Contact Links (The list next to name) --- */
+.hero-links {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: flex-start; /* Aligns them to the left relative to container */
+    margin: 20px auto 0 auto; /* Centers the whole container */
+    gap: 8px; /* Space between each item */
+    width: fit-content; /* Ensures container is only as wide as the text */
+}
+
+.hero-link-item {
+    display: flex;
+    align-items: center; /* Aligns icon with text */
+    color: rgba(255, 255, 255, 0.9); /* White text */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+    gap: 12px; /* Space between icon and text */
+}
+
+/* Style the Icons inside the Hero section */
+.hero-link-item svg {
+    width: 20px;
+    height: 20px;
+    fill: rgba(255, 255, 255, 0.9); /* White icons */
+    transition: fill 0.2s;
+}
+
+/* Hover Effects */
+.hero-link-item:hover {
+    color: #e74c3c; /* Red text on hover */
+    text-decoration: none;
+}
+.hero-link-item:hover svg {
+    fill: #e74c3c; /* Red icon on hover */
+}
+
+
 /* General Page Section Styling */
 section {
     background: white;
