@@ -92,43 +92,66 @@ nav ul li a.active {
     margin-top: 5px;
 }
 
-/* --- Hero Contact Links (The list next to name) --- */
-.hero-links {
-    display: flex;
-    flex-direction: column; /* Stacks items vertically */
-    align-items: flex-start; /* Aligns them to the left relative to container */
-    margin: 20px auto 0 auto; /* Centers the whole container */
-    gap: 8px; /* Space between each item */
-    width: fit-content; /* Ensures container is only as wide as the text */
+/* 1. The Wrapper: Holds Profile (Left) and Links (Right) */
+.hero-content-wrapper {
+    display: flex;             /* Turns on Flexbox */
+    flex-direction: row;       /* Side-by-side */
+    justify-content: center;   /* Center everything in the middle */
+    align-items: center;       /* Align vertical centers */
+    gap: 60px;                 /* Space between Photo and Links */
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
+/* 2. The Profile Section (Left side) */
+.profile-section {
+    text-align: center;        /* Keep text centered under photo */
+}
+
+/* 3. The Links Section (Right side) */
+.hero-links {
+    display: flex;
+    flex-direction: column;    /* Stack links vertically */
+    align-items: flex-start;   /* Align links to the left */
+    gap: 12px;
+}
+
+/* 4. Link Styling */
 .hero-link-item {
     display: flex;
-    align-items: center; /* Aligns icon with text */
-    color: rgba(255, 255, 255, 0.9); /* White text */
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.2s;
-    gap: 12px; /* Space between icon and text */
+    gap: 12px;
 }
 
-/* Style the Icons inside the Hero section */
 .hero-link-item svg {
-    width: 20px;
-    height: 20px;
-    fill: rgba(255, 255, 255, 0.9); /* White icons */
+    fill: rgba(255, 255, 255, 0.9);
     transition: fill 0.2s;
 }
 
-/* Hover Effects */
 .hero-link-item:hover {
-    color: #e74c3c; /* Red text on hover */
-    text-decoration: none;
+    color: #e74c3c;
 }
 .hero-link-item:hover svg {
-    fill: #e74c3c; /* Red icon on hover */
+    fill: #e74c3c;
 }
 
+/*MOBILE LAYOUT (Screen smaller than 768px)*/
+@media (max-width: 768px) {
+    
+    .hero-content-wrapper {
+        flex-direction: column; /* Switch to Vertical Stack */
+        gap: 30px;              /* Reduce gap */
+    }
+
+    .hero-links {
+        align-items: center;    /* Center the links on mobile */
+        width: 100%;            /* Ensure full width */
+    }
+}
 
 /* General Page Section Styling */
 section {
