@@ -286,48 +286,83 @@ a:hover .social-icon {
     color: #555;
 }
 
-/* Vertical Timeline Styles */
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
+/* --- Updated Accordion Styles for Education --- */
 
-.timeline-item {
-    padding: 20px 30px;
-    background: white;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    position: relative;
-    border-left: 4px solid #e74c3c; /* The red vertical line */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    left: -10px;
-    top: 20px;
-    background-color: white;
-    border: 4px solid #2c3e50; /* The blue dot */
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.timeline-date {
-    color: #e74c3c;
+/* This makes the button layout flexible (Title left, Date right) */
+.accordion {
+    display: flex;
+    justify-content: space-between; /* Pushes content to edges */
+    align-items: center;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1rem;
     font-weight: bold;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    display: block;
+    transition: 0.4s;
+    margin-top: 10px; /* Space between buttons */
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-/* Fix for nested lists inside the timeline */
-.timeline-item ul {
-    margin-left: 20px;
-    padding-left: 0;
+.accordion:hover, .active-accordion {
+    background-color: #e74c3c; /* Red highlight when active */
+    color: white;
+}
+
+/* Style for the degree name (Left side) */
+.degree-name {
+    font-weight: bold;
+}
+
+/* Style for the date (Right side) */
+.degree-date {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Mobile Fix: Stack title and date on small screens */
+@media (max-width: 600px) {
+    .accordion {
+        flex-direction: column; /* Stack vertically */
+        align-items: flex-start; /* Align left */
+    }
+    .degree-date {
+        margin-top: 5px;
+        font-size: 0.85rem;
+    }
+}
+
+/* --- Nested Course List Styles --- */
+
+/* The Main Category List (Level 1) */
+.nested-course-list {
+    margin-top: 10px;
+    padding-left: 20px; /* Indents the whole list */
+    list-style-type: disc; /* Solid black dots */
+}
+
+.nested-course-list > li {
+    margin-bottom: 10px; /* Space between main categories */
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+/* The Sub-Course List (Level 2) */
+.nested-course-list ul {
+    margin-top: 5px;
+    padding-left: 20px; /* Indents the sub-items further right */
+    list-style-type: circle; /* Hollow circles for sub-items */
+}
+
+.nested-course-list ul li {
+    margin-bottom: 3px; /* Smaller space between specific courses */
+    font-size: 0.95rem;
+    color: #555; /* Slightly lighter text for sub-items */
 }
 
 /* Contact Page Form */
