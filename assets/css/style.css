@@ -337,6 +337,19 @@ a:hover .social-icon {
     }
 }
 
+/* --- TA duty list --- */
+.TA-duty-list {
+    margin-top: 10px;
+    padding-left: 20px; /* Indents the whole list */
+    list-style-type: disc; /* Solid black dots */
+}
+
+.TA-duty-list > li {
+    margin-bottom: 10px; /* Space between main categories */
+    font-size: 0.99rem;
+    color: #2c3e50;
+}
+
 /* --- Nested Course List Styles --- */
 
 /* The Main Category List (Level 1) */
@@ -428,12 +441,12 @@ footer {
         border-radius: 5px;
     }
 
-    /* 2. Adjust the Container width for mobile */
+    /* Adjust the Container width for mobile */
     .container {
         padding: 0 15px; /* Slightly less padding on the sides */
     }
 
-    /* 3. Adjust Text Sizes so they aren't huge on mobile */
+    /* Adjust Text Sizes so they aren't huge on mobile */
     h1 { font-size: 2rem; }
     .hero p { font-size: 1rem; }
 }
