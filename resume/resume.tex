@@ -1,191 +1,249 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[empty]{fullpage}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{tabularx}
 
-% Page margins
-\geometry{left=0.5in, top=0.6in, right=0.5in, bottom=0.6in}
+% ----------  Page margins  ----------
+\geometry{left=0.5in, top=0.4in, right=0.5in, bottom=0.4in}
 
-% Custom colors
-\definecolor{darkblue}{rgb}{0.0, 0.0, 0.4}
+% ----------  Colors  ----------
+\definecolor{accent}{HTML}{1A2A52}   % deep navy
+\definecolor{muted}{HTML}{555555}
 
-% Section formatting
+% ----------  Hyperlinks  ----------
+\hypersetup{
+	colorlinks=true,
+	urlcolor=accent,
+	linkcolor=accent
+}
+
+% ----------  Section formatting (Option C: uppercase, letterspaced, thin rule) ----------
 \titleformat{\section}{
-	\vspace{-5pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+	\vspace{-4pt}\scshape\raggedright\large\bfseries\color{accent}
+}{}{0em}{}[\color{accent}\titlerule \vspace{-4pt}]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
 
-% Custom commands for list items
+% ----------  Custom commands  ----------
 \newcommand{\resumeItem}[1]{
-	\item\small{
-		{#1 \vspace{-2pt}}
-	}
+	\item\small{#1}
+	\vspace{1pt}
 }
 
 \newcommand{\resumeSubheading}[4]{
-	\vspace{-1pt}\item
-	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+	\vspace{4pt}\item
+	\begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 		\textit{\small#3} & \textit{\small #4} \\
-	\end{tabular*}\vspace{-5pt}
+	\end{tabular*}\vspace{3pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-	\item
-	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-		\small#1 & #2 \\
-	\end{tabular*}\vspace{-5pt}
+	\vspace{5pt}\item
+	\begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & \small#2 \\
+	\end{tabular*}\vspace{3pt}
 }
 
+% Indented project description (sits cleanly under the project title)
+\newcommand{\resumeItemDesc}[1]{
+	\begin{itemize}[leftmargin=0.32in, label={}, topsep=0pt, partopsep=0pt]
+		\item \small{#1}
+	\end{itemize}
+	\vspace{1pt}
+}
+
+\setlist[itemize]{topsep=4pt, partopsep=0pt, itemsep=4pt, parsep=0pt}
 \renewcommand{\labelitemii}{$\circ$}
+\linespread{1.05}
 
 \begin{document}
 	
-	\begin{center}
-		{\Huge \textbf{Rakshith Ajetaravi}} \\ \vspace{5pt}
-		\href{mailto:arakshith@iisc.ac.in}{arakshith@iisc.ac.in} $|$ \href{mailto:rakshithajetaravi@gmail.com}{rakshithajetaravi@gmail.com} $|$ \small +916363759090\\
-		\small \href{https://github.com/rakshith-6}{GitHub profile} $|$ \href{https://rakshith-6.github.io/portfolio-website/}{Portfolio website} $|$ \href{https://www.linkedin.com/in/rakshith-ajetaravi}{Linkedin}
-	\end{center}
+	%==================  HEADER (Option C: name left, contacts right)  ==================
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+		{\Huge \textbf{Rakshith Ajetaravi}} &
+		\small \href{mailto:arakshith@iisc.ac.in}{arakshith@iisc.ac.in} \\
+		{\color{accent}\small Robotics $\cdot$ Control $\cdot$ Autonomous Systems} &
+		\small +91 63637 59090 \\
+		& \small \href{https://github.com/rakshith-6}{GitHub} \quad $|$ \quad \href{https://www.linkedin.com/in/rakshith-ajetaravi}{LinkedIn} \\
+	\end{tabular*}
+	\vspace{2pt}
+	\hrule height 0.6pt
+	\vspace{-2pt}
 	
+	%==================  EDUCATION  ==================
 	\section{Education}
 	\begin{itemize}[leftmargin=0.15in, label={}]
 		\resumeSubheading
 		{Indian Institute of Science (IISc)}{Bengaluru, India}
-		{M.Tech in Robotics and Autonomous Systems (CPS Department)}{present}
-		\vspace{2pt}
+		{M.Tech in Robotics and Autonomous Systems (CPS Department)}{Present}
 		\begin{itemize}
-			\item \textbf{Current Performance: 6.8 CGPA} 
-			\item \textbf{Relevant Courses:} 
+			\item \textbf{Current Performance: 7.7 CGPA}
+			\item \textbf{Relevant Courses:}
 			\begin{itemize}
-				
 				\item \textbf{Foundations:}
-				Foundations of Robotics; Mathematical Techniques for Robotics Systems				
-				
-				\item \textbf{Control Systems (Minor/Specialization):}
+				Foundations of Robotics; Mathematical Techniques for Robotics Systems
+				\item \textbf{Control Systems (Specialization):}
 				Applied Linear and Non-Linear Control; Non-linear Systems and Control; Sliding Mode Control and its Applications; Applied Optimal Control and State Estimation
-				
-				\item \textbf{Robotics System:}
+				\item \textbf{Robotics Systems:}
 				Swarm Robotic Systems; Motion Planning for Autonomous Systems
-				
 				\item \textbf{Machine Learning \& AI:}
 				Machine Learning for Cyber-Physical Systems; Reinforcement Learning; Generative and Agentic AI in Practice
-				
 				\item \textbf{Embedded Systems:}
 				Design of Cyber-Physical Systems
-				
 			\end{itemize}
-			
-			\item \textbf{Teaching Assistant for the course E1241:Dynamics of Linear System(August term 2025)}.
+			\item \textbf{Teaching Assistant:}
+			\begin{itemize}
+				\item E1241: Dynamics of Linear Systems (August term 2025)
+				\item CP230: Motion Planning for Autonomous Systems (January term 2026)
+			\end{itemize}
 		\end{itemize}
 		
 		\resumeSubheading
-		{The National Institute of Engineering(TNIE)}{Mysuru, India}
+		{National Institute of Engineering (NIE)}{Mysuru, India}
 		{Bachelor of Engineering in Mechanical Engineering}{2022}
-		\vspace{2pt}
 		\begin{itemize}
 			\item \textbf{CGPA: 8.75 / 10}
-			\item \textbf{Focus Areas:} Design and Manufacturing; Computational Fluid Dynamics; Aircraft Propulsion; Robotics and Numerical Control; Control Engineering; Operations Research.
+			\item \textbf{Focus Areas:} Applied Mechanics and Design; Thermal and Fluids; Controls, Robotics and Mechatronics; Manufacturing, Materials and Industrial Engineering.
 		\end{itemize}
 		
 		\resumeSubheading
-		{Gopalaswamy Shishuvihara PU College(Sankalpa)}{Mysuru, India}
-		{Class 12th (Karnataka State Board) - PCMB}{2018}
-		\vspace{2pt}
+		{Gopalaswamy Shishuvihara PU College (Sankalpa)}{Mysuru, India}
+		{Class 12th (Karnataka State Board) -- PCMB}{2018}
 		\begin{itemize}
 			\item \textbf{Percentage: 81.67\%}
 		\end{itemize}
 		
 		\resumeSubheading
-		{JSS Public School, JP nagar}{Mysuru, India}
+		{JSS Public School, JP Nagar}{Mysuru, India}
 		{Class 10th (CBSE Board)}{2016}
-		\vspace{2pt}
 		\begin{itemize}
 			\item \textbf{CGPA: 9.8 / 10}
 		\end{itemize}
 	\end{itemize}
 	
+	%==================  TECHNICAL SKILLS  ==================
 	\section{Technical Skills}
 	\begin{itemize}[leftmargin=0.15in, label={}]
+		\vspace{6pt}
 		\small{\item{
-				\textbf{Robotics \& Simulation}{: ROS2, Gazebo, RViz, NVIDIA ISAAC Sim, ArduPilot} \\
-				\textbf{Programming}{: Python, C++, C, MATLAB, Julia} \\
-				\textbf{Data Science \& ML}{: PyTorch, TensorFlow, Keras, Gymnasium, Numpy, Pandas} \\
+				\textbf{Robotics \& Simulation}{: ROS2, Gazebo, Rviz, MuJoCo, NVIDIA ISAAC Sim} \\
+				\textbf{Programming}{: Python, C, MATLAB, Julia} \\
+				\textbf{Data Science \& ML}{: TensorFlow, Keras, PyTorch, Scikit-learn, Pandas, NumPy, Gymnasium, OpenCV} \\
+				\textbf{Control \& Estimation}{: LQR, MPC, Sliding Mode Control, ADRC, Kalman Filtering, Reinforcement Learning} \\
 				\textbf{Engineering Design}{: SolidWorks, Fusion 360, CATIA, Ansys, Qblade, Ultimaker Cura}
 		}}
 	\end{itemize}
-
-
+	
+	%==================  PROJECTS (exact PDF order, verbatim)  ==================
 	\section{Academic \& Personal Projects}
 	\begin{itemize}[leftmargin=0.15in, label={}]
 		
 		\resumeProjectHeading
-		{\textbf{VidQuery: Agentic Multimodal Video RAG} $|$ \emph{LangGraph, Qdrant, Llama-3.2-Vision}}{}
-		\resumeItem{Developing an \textbf{agentic RAG system} for video lectures that synthesizes multimodal data (video frames, audio, slide text) using local open-source models like \textbf{Llama-3.2-Vision} and \textbf{Whisper}.}
-		\resumeItem{Engineered the \textbf{Vector Database pipeline} using \textbf{Qdrant} to store and index multimodal embeddings (\textbf{CLIP} for vision, Nomic for text), optimizing retrieval for \textbf{complex temporal queries} (e.g., "what was said after this diagram?").}
-		\resumeItem{Implemented precise synchronization between visual embeddings and audio transcripts to enable \textbf{high-accuracy semantic search} across lecture content.}
+		{\textbf{E-Gokart and Formula Student Vehicle} $|$ \emph{Team Captain}}{Oct'20 -- Aug'22}
+		\vspace{-6pt}
+		\resumeItemDesc{Involved in \textbf{design and manufacturing of electric go-karts} for \textbf{GKDC} (Go-kart Design Challenge Competition) and \textbf{design of electric formula student vehicle} (based on the official student formula notebook) for \textbf{FGCC} (Formula Green Concept Challenge), both events organised by \textbf{ISNEE Motorsport} (Indian Society of New Era Engineers).}
 		
 		\resumeProjectHeading
-		{\textbf{Machine Learning Research Applications} $|$ \emph{Python, Scikit-Learn}}{}
-		\resumeItem{Utilized \textbf{Supervised Learning} techniques to classify earthquake-prone buildings based on structural data. Conducted hypothesis-driven research and exploratory data analysis of Australian suburbs using \textbf{Unsupervised Learning} methods.}
+		{\textbf{Other Projects} $|$ \emph{On-Going Projects}}{Aug'24 --}
+		\begin{itemize}
+			\item \small \textbf{Bi-copter:} A fully portable (can be folded and stacked together) two-rotor copter with tilt-rotor mechanism for military applications.
+			\item \small \textbf{Fixed Wing VTOL:} A low-endurance tail-sitter e-UAV with single-rotor propulsion system used for surveillance. Transition and hover control with control vanes using thrust vectoring (inspired by the V-BAT).
+			\item \small \textbf{Humanoid:} A full-scale anthropomorphic companion robot with VLA (Visual Language Action) integration.
+			\item \small \textbf{Spider-Bot:} A 4-leg robot which can navigate in rough terrain, for space and military applications.
+		\end{itemize}
+		\vspace{1pt}
 		
 		\resumeProjectHeading
-		{\textbf{Innovative Bi-Copter Drone Design \& Control}}{}
-		\resumeItem{Designed an innovative \textbf{bi-copter drone}, addressing mechanical complexities unique to dual-rotor aerial systems. Implemented a \textbf{custom control strategy} to ensure \textbf{optimal flight stability} and precise rotor synchronization.}
+		{\textbf{Deep Koopman Based Quadrotor System Identification} $|$ \emph{Final Year Project}}{On-going}
+		\vspace{-6pt}
+		\resumeItemDesc{Using the simulated \textbf{flight data generated in Gazebo} to learn Koopman observables and the corresponding global linear representation in these observables space using the \textbf{deep Lipschitz neural network}. The learned system dynamics is later used to implement a \textbf{real-time linear model predictive control (LMPC)} for robust trajectory tracking under external disturbances and wind conditions. Its performance is then validated against MPC implemented on classical linear, non-linear, and other Koopman-based models of the quadrotor system.}
 		
 		\resumeProjectHeading
-		{\textbf{Decentralized leader-follower formation control using RL}}{}
-		\resumeItem{Implemented a decentralized leader-follower formation control using Reinforcement Learning, specifically utilizing two Double Deep Q-Network (DDQN) algorithms: one for reaching the formation and the other for maintaining it.}
+		{\textbf{Implementation of Control Strategies for a Self-Balancing Cube} $|$ \emph{Capstone Project}}{}
+		\vspace{-6pt}
+		\resumeItemDesc{Derived the nonlinear dynamics of a reaction-wheel self-balancing cube using \textbf{Lagrangian mechanics} and formulated the linearized state-space representation. Implemented \textbf{Linear Quadratic Regulator (LQR)} and \textbf{Active Disturbance Rejection Control (ADRC)} algorithms, demonstrating through simulation the two control strategies.}
 		
 		\resumeProjectHeading
-		{\textbf{Vision-Based UAV Perception}}{}
-		\resumeItem{Engineered a \textbf{vision-based pipeline} for autonomous UAVs to \textbf{estimate velocity} and detect obstacles in real-time. Integrated perception modules with \textbf{flight control loops} to enable autonomous navigation in dynamic environments.}
+		{\textbf{Sliding-Mode Control for Flight Stability of Quadrotor Drone} $|$ \emph{Adaptive Super-Twisting Reaching Law}}{}
+		\vspace{-6pt}
+		\resumeItemDesc{Implemented a robust \textbf{Adaptive Super-Twisting Sliding Mode Controller (ASTRL)} to enhance the flight stability of a quadrotor drone against disturbances and sensor noise. An exponential function-based adaptive law was implemented to dynamically adjust control gains, achieving \textbf{faster reaching times and reduced chattering} compared to conventional SMC and traditional Super-Twisting Algorithms.}
 		
 		\resumeProjectHeading
-		{\textbf{Fixed Wing VTOL Development}}{}
-		\resumeItem{Currently developing a \textbf{Fixed-Wing Vertical Take-Off and Landing (VTOL)} aircraft, advancing the prototype to \textbf{Technology Readiness Level (TRL) 2}.}
+		{\textbf{Cooperative Mapping in an Unknown Grid Environment} $|$ \emph{Capstone Project}}{}
+		\vspace{-6pt}
+		\resumeItemDesc{Implemented \textbf{frontier-based exploration}, where robots move toward unknown cells next to explored areas. Designed a utility function that balances information gain (new cells discoverable within sensor range using line-of-sight with obstacle blocking) and travel cost (Manhattan distance). Used \textbf{Breadth-First Search (BFS)} for path planning on the partially known map and added collision avoidance so robots do not move into the same or conflicting cells. Visualized explored areas, frontiers, robot paths, and real-time utility values in a \textbf{pygame} environment.}
 		
 		\resumeProjectHeading
-		{\textbf{4-DOF Manipulator (BE Project)} $|$ \emph{SolidWorks, Embedded C}}{}
-		\resumeItem{Designed and fabricated a \textbf{4 Degrees of Freedom (DOF)} robotic manipulator, handling the \textbf{mechanical design} and actuation system.}
+		{\textbf{Vision-Based Obstacle Detection and Avoidance for UAV Navigation} $|$ \emph{Capstone Project}}{}
+		\vspace{-6pt}
+		\resumeItemDesc{Demonstrated that a \textbf{minimal perception setup}, using only an \textbf{Intel RealSense} camera, is sufficient for reliable perception and real-time collision-free navigation in cluttered environments. The system includes \textbf{3D voxel-based occupancy mapping}, dynamic obstacle detection and tracking using an ensemble of \textbf{U-Depth, DBSCAN, and YOLO-MAD}, and Kalman filters for accurate state estimation. For motion planning, the \textbf{RRT} algorithm explores feasible paths, refined using \textbf{B-spline optimisation} to generate optimal, collision-free paths for quadrotors and lightweight UAVs with limited payload and power.}
 		
+		\resumeProjectHeading
+		{\textbf{Reinforcement Learning Projects} $|$ \emph{Personal and Capstone Projects}}{}
+		\begin{itemize}
+			\item \small \textbf{Model-based and model-free RL:} Comparing the Adaptive Dynamic Programming (ADP) agent (model-based learning) and tabular Q-Learning agent (model-free learning) in a grid-world environment.
+			\item \small \textbf{RL-based formation control:} Implemented a leader robot that follows a trajectory with a simple PID controller; the followers are independent agents that take actions by learning a policy using \textbf{Double Deep Q-Network (DDQN)}.
+			\item \small \textbf{The Option-Critic Architecture:} Implemented the Option-Critic architecture to autonomously discover temporal abstractions (options). By jointly learning intra-option policies, termination functions, and a policy over options via policy gradient theorems, the agent developed high-level behaviors without manual subgoals. Results across \textbf{Fourrooms and Atari} environments showed faster adaptation to changing goals and superior transfer learning compared to primitive action methods.
+		\end{itemize}
+		\vspace{1pt}
+		
+		\resumeProjectHeading
+		{\textbf{Hypothesis Testing and Exploratory Analysis of Australian Suburbs} $|$ \emph{Capstone Project}}{}
+		\vspace{-6pt}
+		\resumeItemDesc{Conducted \textbf{unsupervised learning} on Melbourne suburb datasets to uncover socio-economic and demographic patterns. Utilized \textbf{Principal Component Analysis (PCA)} for dimensionality reduction and engineered custom similarity metrics using Euclidean and Cosine distances. Implemented \textbf{K-Means clustering} and Multidimensional Scaling (MDS) to segment profiles, validating the hypothesis that geographical proximity correlates with profile similarity through geodesic mapping and statistical testing.}
+		
+		\resumeProjectHeading
+		{\textbf{Earthquake-Prone Building Assessment} $|$ \emph{Building Material Classification from Street-View Imagery}}{}
+		\vspace{-6pt}
+		\resumeItemDesc{Developed a machine learning pipeline using \textbf{TensorFlow and Keras} to classify building structures into five material types for earthquake risk assessment from Google Street-View images. Utilized \textbf{Transfer Learning} by fine-tuning a pre-trained \textbf{ResNet50} model. Addressed class imbalance with data augmentation, and improved generalization through \textbf{L2 regularization, Dropout}, and adaptive callbacks (EarlyStopping, ReduceLROnPlateau).}
+		
+		\resumeProjectHeading
+		{\textbf{VidQuery} $|$ \emph{Multimodal RAG System, Capstone Project}}{}
+		\vspace{-6pt}
+		\resumeItemDesc{A multimodal \textbf{Retrieval-Augmented Generation (RAG)} system that allows users to query educational videos through an interactive \textbf{Gradio} interface, delivering precise answers alongside exact timestamp citations. The pipeline extracts audio via \textbf{Whisper}, slide text via \textbf{PaddleOCR}, and video frames, generating text embeddings with \textbf{BGE} and visual embeddings with \textbf{SigLIP}, stored in a \textbf{Milvus} database. Agentic orchestration and multi-step retrieval use \textbf{Llama 3.1 8B Instruct}, while \textbf{Llama 3.2 11B Vision} handles deep visual frame analysis. Built entirely on an open-source stack, running locally to ensure data privacy and eliminate cloud API costs.}
 		
 	\end{itemize}
 	
-	%-----------EXPERIENCE-----------------
-	% Note: The & character is escaped with a backslash (\&)
+	%==================  EXPERIENCE & LEADERSHIP  ==================
 	\section{Professional Experience \& Leadership}
 	\begin{itemize}[leftmargin=0.15in, label={}]
 		
 		\resumeSubheading
 		{Paraha Ventures}{Mysuru, India}
 		{Co-Founder}{2022 -- 2023}
+		\vspace{-6pt}
 		\resumeItem{Co-founded and actively operated a \textbf{freelance digital marketing startup} for 1.5 years following graduation.}
 		\resumeItem{Delivered \textbf{end-to-end digital solutions} for local businesses, managing projects across Website Development, \textbf{SEO}, and Social Media Marketing.}
-		\resumeItem{Gained hands-on \textbf{entrepreneurial experience} in client relations, project management, and technical implementation before transitioning to higher studies.}
+		\resumeItem{Gained hands-on \textbf{entrepreneurial experience} in client relations and project management before transitioning to higher studies.}
+		\vspace{-9pt}
 		
 		\resumeSubheading
-		{Agnie Racing (Student Motorsport Club)}{}
+		{Student Motorsport Team (ISNEE Motorsport)}{Mysuru, India}
 		{Captain}{2020 -- 2021}
-		\resumeItem{Led the team in two national-level events: \textbf{Go-kart Design Challenge 2020} and \textbf{Formula Green Concept Challenge 2021}.}
-		\resumeItem{Oversaw the \textbf{design and fabrication} of electric karts, managing team logistics and engineering timelines.}
+		\vspace{-9pt}
+		\resumeItem{Led the team in the \textbf{design and fabrication of multiple electric karts}, managing engineering timelines and team logistics.}
+		\resumeItem{Competed in prestigious national-level events including \textbf{Formula Green (Formula Student Electric)} and the \textbf{Go-kart Design Challenge (GKDC)}, both organized by ISNEE Motorsport, India, \textbf{winning several awards}.}
+		\vspace{3pt}
 		
 		\resumeSubheading
-		{Make A Difference (MAD)}{}
-		{Transition Readiness Tutor}{2 Years}
-		\resumeItem{Served as a tutor focusing on \textbf{transition readiness}, providing mentorship and educational support to youth.}
+		{Make A Difference (MAD)}{Mysuru, India}
+		{Tutor}{2019 -- 2021}
+		\vspace{-9pt}
+		\resumeItem{Served 2 years as a tutor at \textbf{Make A Difference (MAD)}, a youth-driven NGO dedicated to supporting children in need of care and protection.}
 	\end{itemize}
 	
-	%-----------HOBBIES-----------------
-	\section{Hobbies \& Interests}
+	%==================  ADDITIONAL  ==================
+	\section{Additional Information}
 	\begin{itemize}[leftmargin=0.15in, label={}]
 		\small{\item{
-				\textbf{Sports}: Basketball, Cricket, Chess, Frisbee \\
-				\textbf{Creative}: Filmmaking, Writing Stories \\
-				\textbf{Reading}: Fiction, Non-Fiction, History
+				\textbf{Languages}{: Kannada, Hindi, Telugu, English} \\
+				\textbf{Interests}{: Basketball, Cricket, Chess, Frisbee; Filmmaking, Writing, Character Sketching}
 		}}
 	\end{itemize}
 	
