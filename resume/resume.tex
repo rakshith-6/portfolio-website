@@ -68,9 +68,9 @@
 	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
 		{\Huge \textbf{Rakshith Ajetaravi}} &
 		\small \href{mailto:arakshith@iisc.ac.in}{arakshith@iisc.ac.in} \\
-		{\color{accent}\small Robotics $\cdot$ Control $\cdot$ Autonomous Systems} &
-		\small +91 63637 59090 \\
-		& \small \href{https://github.com/rakshith-6}{GitHub} \quad $|$ \quad \href{https://www.linkedin.com/in/rakshith-ajetaravi}{LinkedIn} \\
+		{\color{accent}\small Robotics \& Autonomous Systems $\cdot$ AI\&ML} &
+		\small +91 6363759090 \\
+		& \small \href{https://github.com/rakshith-6}{GitHub} $|$  \href{https://www.linkedin.com/in/rakshith-ajetaravi}{LinkedIn} \\
 	\end{tabular*}
 	\vspace{2pt}
 	\hrule height 0.6pt
@@ -135,7 +135,7 @@
 				\textbf{Robotics \& Simulation}{: ROS2, Gazebo, Rviz, MuJoCo, NVIDIA ISAAC Sim} \\
 				\textbf{Programming}{: Python, C	, MATLAB, Julia} \\
 				\textbf{Data Science \& ML}{: TensorFlow, Keras, PyTorch, Scikit-learn, Pandas, NumPy, Gymnasium, OpenCV} \\
-				\textbf{Control \& Estimation}{: LQR, MPC, Sliding Mode Control, ADRC, Kalman Filtering, Reinforcement Learning} \\
+				\textbf{Control}{: LQR, MPC, Sliding Mode Control, Reinforcement Learning Based Control} \\
 				\textbf{Engineering Design}{: SolidWorks, Fusion 360, CATIA, Ansys, Qblade, Ultimaker Cura}
 		}}
 	\end{itemize}
@@ -145,24 +145,33 @@
 	\begin{itemize}[leftmargin=0.15in, label={}]
 		
 		\resumeProjectHeading
-		{\textbf{E-Gokart and Formula Student Vehicle} $|$ \emph{Team Captain}}{Oct'20 -- Aug'22}
+		{\textbf{VidQuery} $|$ \emph{Multimodal RAG System, Capstone Project}}{}
 		\vspace{-6pt}
-		\resumeItemDesc{Involved in \textbf{design and manufacturing of electric go-karts} for \textbf{GKDC} (Go-kart Design Challenge Competition) and \textbf{design of electric formula student vehicle} (based on the official student formula notebook) for \textbf{FGCC} (Formula Green Concept Challenge), both events organised by \textbf{ISNEE Motorsport} (Indian Society of New Era Engineers).}
-		
-		\resumeProjectHeading
-		{\textbf{Other Projects} $|$ \emph{On-Going Projects}}{Aug'24 --}
-		\begin{itemize}
-			\item \small \textbf{Bi-copter:} A fully portable (can be folded and stacked together) two-rotor copter with tilt-rotor mechanism for military applications.
-			\item \small \textbf{Fixed Wing VTOL:} A low-endurance tail-sitter e-UAV with single-rotor propulsion system used for surveillance. Transition and hover control with control vanes using thrust vectoring (inspired by the V-BAT).
-			\item \small \textbf{Humanoid:} A full-scale anthropomorphic companion robot with VLA (Visual Language Action) integration.
-			\item \small \textbf{Spider-Bot:} A 4-leg robot which can navigate in rough terrain, for space and military applications.
-		\end{itemize}
-		\vspace{1pt}
+		\resumeItemDesc{A multimodal \textbf{Retrieval-Augmented Generation (RAG)} tutor that lets users query educational documents and videos through an interactive \textbf{Gradio} interface and CLI, give answers with exact page and timestamp citations. The pipeline extracts audio via \textbf{Whisper} (faster-whisper), detects scene changes and captions video frames with a vision-language model (\textbf{Qwen2.5-VL}), and extracts structured text from PDFs/DOCX, generating embeddings with \textbf{BGE-M3} stored in \textbf{ChromaDB}. Implemented hybrid retrieval with cross-encoder reranking and a self-correcting LangGraph agent for multi-step query refinement, done with \textbf{Qwen2.5 14B Instruct}. Built entirely from \textbf{open-source models}, and can run locally to ensure \textbf{data privacy and eliminate cloud API costs}.}
 		
 		\resumeProjectHeading
 		{\textbf{Deep Koopman Based Quadrotor System Identification} $|$ \emph{Final Year Project}}{On-going}
 		\vspace{-6pt}
 		\resumeItemDesc{Using the simulated \textbf{flight data generated in Gazebo} to learn Koopman observables and the corresponding global linear representation in these observables space using the \textbf{deep Lipschitz neural network}. The learned system dynamics is later used to implement a \textbf{real-time linear model predictive control (LMPC)} for robust trajectory tracking under external disturbances and wind conditions. Its performance is then validated against MPC implemented on classical linear, non-linear, and other Koopman-based models of the quadrotor system.}
+		
+		\resumeProjectHeading
+		{\textbf{Hypothesis Testing and Exploratory Analysis of Australian Suburbs} $|$ \emph{Capstone Project}}{}
+		\vspace{-6pt}
+		\resumeItemDesc{Conducted \textbf{unsupervised learning} on Melbourne suburb datasets to uncover socio-economic and demographic patterns. Utilized \textbf{Principal Component Analysis (PCA)} for dimensionality reduction and engineered custom similarity metrics using Euclidean and Cosine distances. Implemented \textbf{K-Means clustering} and Multidimensional Scaling (MDS) to segment profiles, validating the hypothesis that geographical proximity correlates with profile similarity through geodesic mapping and statistical testing.}
+		
+		\resumeProjectHeading
+		{\textbf{Earthquake-Prone Building Assessment} $|$ \emph{Building Material Classification from Street-View Imagery}}{}
+		\vspace{-6pt}
+		\resumeItemDesc{Developed a machine learning pipeline using \textbf{TensorFlow and Keras} to classify building structures into five material types for earthquake risk assessment from Google Street-View images. Utilized \textbf{Transfer Learning} by fine-tuning a pre-trained \textbf{ResNet50} model. Addressed class imbalance with data augmentation, and improved generalization through \textbf{L2 regularization, Dropout}, and adaptive callbacks (EarlyStopping, ReduceLROnPlateau).}
+		
+		\resumeProjectHeading
+		{\textbf{Reinforcement Learning Projects} $|$ \emph{Personal and Capstone Projects}}{}
+		\begin{itemize}
+			\item \small \textbf{Model-based and model-free RL:} Comparing the Adaptive Dynamic Programming (ADP) agent (model-based learning) and tabular Q-Learning agent (model-free learning) in a grid-world environment.
+			\item \small \textbf{RL-based formation control:} Implemented a leader robot that follows a trajectory with a simple PID controller; the followers are independent agents that take actions by learning a policy using \textbf{Double Deep Q-Network (DDQN)}.
+			\item \small \textbf{The Option-Critic Architecture:} Implemented the Option-Critic architecture to autonomously discover temporal abstractions (options). By jointly learning intra-option policies, termination functions, and a policy over options via policy gradient theorems, the agent developed high-level behaviors without manual subgoals. Results across \textbf{Fourrooms and Atari} environments showed faster adaptation to changing goals and superior transfer learning compared to primitive action methods.
+		\end{itemize}
+		\vspace{1pt}
 		
 		\resumeProjectHeading
 		{\textbf{Implementation of Control Strategies for a Self-Balancing Cube} $|$ \emph{Capstone Project}}{}
@@ -185,28 +194,19 @@
 		\resumeItemDesc{Demonstrated that a \textbf{minimal perception setup}, using only an \textbf{Intel RealSense} camera, is sufficient for reliable perception and real-time collision-free navigation in cluttered environments. The system includes \textbf{3D voxel-based occupancy mapping}, dynamic obstacle detection and tracking using an ensemble of \textbf{U-Depth, DBSCAN, and YOLO-MAD}, and Kalman filters for accurate state estimation. For motion planning, the \textbf{RRT} algorithm explores feasible paths, refined using \textbf{B-spline optimisation} to generate optimal, collision-free paths for quadrotors and lightweight UAVs with limited payload and power.}
 		
 		\resumeProjectHeading
-		{\textbf{Reinforcement Learning Projects} $|$ \emph{Personal and Capstone Projects}}{}
+		{\textbf{E-Gokart and Formula Student Vehicle} $|$ \emph{Team Captain}}{Oct'20 -- Aug'22}
+		\vspace{-6pt}
+		\resumeItemDesc{Involved in \textbf{design and manufacturing of electric go-karts} for \textbf{GKDC} (Go-kart Design Challenge Competition) and \textbf{design of electric formula student vehicle} (based on the official student formula notebook) for \textbf{FGCC} (Formula Green Concept Challenge), both events organised by \textbf{ISNEE Motorsport} (Indian Society of New Era Engineers).}
+		
+		\resumeProjectHeading
+		{\textbf{Other Projects} $|$ \emph{On-Going Projects}}{Aug'24 --}
 		\begin{itemize}
-			\item \small \textbf{Model-based and model-free RL:} Comparing the Adaptive Dynamic Programming (ADP) agent (model-based learning) and tabular Q-Learning agent (model-free learning) in a grid-world environment.
-			\item \small \textbf{RL-based formation control:} Implemented a leader robot that follows a trajectory with a simple PID controller; the followers are independent agents that take actions by learning a policy using \textbf{Double Deep Q-Network (DDQN)}.
-			\item \small \textbf{The Option-Critic Architecture:} Implemented the Option-Critic architecture to autonomously discover temporal abstractions (options). By jointly learning intra-option policies, termination functions, and a policy over options via policy gradient theorems, the agent developed high-level behaviors without manual subgoals. Results across \textbf{Fourrooms and Atari} environments showed faster adaptation to changing goals and superior transfer learning compared to primitive action methods.
+			\item \small \textbf{Bi-copter:} A fully portable (can be folded and stacked together) two-rotor copter with tilt-rotor mechanism for military applications.
+			\item \small \textbf{Fixed Wing VTOL:} A low-endurance tail-sitter e-UAV with single-rotor propulsion system used for surveillance. Transition and hover control with control vanes using thrust vectoring (inspired by the V-BAT).
+			\item \small \textbf{Humanoid:} A full-scale anthropomorphic companion robot with VLA (Visual Language Action) integration.
+			\item \small \textbf{Spider-Bot:} A 4-leg robot which can navigate in rough terrain, for space and military applications.
 		\end{itemize}
 		\vspace{1pt}
-		
-		\resumeProjectHeading
-		{\textbf{Hypothesis Testing and Exploratory Analysis of Australian Suburbs} $|$ \emph{Capstone Project}}{}
-		\vspace{-6pt}
-		\resumeItemDesc{Conducted \textbf{unsupervised learning} on Melbourne suburb datasets to uncover socio-economic and demographic patterns. Utilized \textbf{Principal Component Analysis (PCA)} for dimensionality reduction and engineered custom similarity metrics using Euclidean and Cosine distances. Implemented \textbf{K-Means clustering} and Multidimensional Scaling (MDS) to segment profiles, validating the hypothesis that geographical proximity correlates with profile similarity through geodesic mapping and statistical testing.}
-		
-		\resumeProjectHeading
-		{\textbf{Earthquake-Prone Building Assessment} $|$ \emph{Building Material Classification from Street-View Imagery}}{}
-		\vspace{-6pt}
-		\resumeItemDesc{Developed a machine learning pipeline using \textbf{TensorFlow and Keras} to classify building structures into five material types for earthquake risk assessment from Google Street-View images. Utilized \textbf{Transfer Learning} by fine-tuning a pre-trained \textbf{ResNet50} model. Addressed class imbalance with data augmentation, and improved generalization through \textbf{L2 regularization, Dropout}, and adaptive callbacks (EarlyStopping, ReduceLROnPlateau).}
-		
-		\resumeProjectHeading
-		{\textbf{VidQuery} $|$ \emph{Multimodal RAG System, Capstone Project}}{}
-		\vspace{-6pt}
-		\resumeItemDesc{A multimodal \textbf{Retrieval-Augmented Generation (RAG)} system that allows users to query educational videos through an interactive \textbf{Gradio} interface, delivering precise answers alongside exact timestamp citations. The pipeline extracts audio via \textbf{Whisper}, slide text via \textbf{PaddleOCR}, and video frames, generating text embeddings with \textbf{BGE} and visual embeddings with \textbf{SigLIP}, stored in a \textbf{Milvus} database. Agentic orchestration and multi-step retrieval use \textbf{Llama 3.1 8B Instruct}, while \textbf{Llama 3.2 11B Vision} handles deep visual frame analysis. Built entirely on an open-source stack, running locally to ensure data privacy and eliminate cloud API costs.}
 		
 	\end{itemize}
 	
