@@ -228,6 +228,19 @@ a:hover .social-icon {
     margin-top: 0;
 }
 
+.card a {
+    display: block;
+}
+
+.card a img {
+    cursor: zoom-in;
+    transition: opacity 0.2s;
+}
+
+.card a:hover img {
+    opacity: 0.85;
+}
+
 /* Accordion (Category Dropdown) Styles */
 
 /* The Button Style */
